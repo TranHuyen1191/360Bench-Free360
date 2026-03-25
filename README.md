@@ -27,33 +27,32 @@ root/
 - Use the ExtractInsta360Frame.py script to process the downloaded videos. The script references the mapping in Insta360_FrameIndex.csv to extract specific frames, which are then saved directly into the ori_images/ directory.
 
 ### Image Preprocessing
-- Downsample all images within the ori_images/ directory to a 7K resolution ($7296 \times 3648$ pixels) and then store them in the ERP_images/ directory.
+- Downsample all images within the ori_images/ directory to a 7K resolution (7296 x 3648 pixels) and then store them in the ERP_images/ directory.
 
-### Benchmark Annotation: 
-360Bench.tsv is the main annotation file of the benchmark. Each row corresponds to a multiple-choice question associated with a 360° image.
-
+### Benchmark Annotation
+360Bench.tsv is the main annotation file of the benchmark. 
+Each row corresponds to a multiple-choice question associated with a 360° image.
 Each entry includes:
-#### image_file: image filename
-#### question: question about the image
-#### category / l2-category: task type (e.g., SR-Os)
-#### bbox: bounding boxes of relevant objects in ERP images
-#### multi-choice options: multiple-choice options
-#### answer: correct answer
+- mage_file: image filename
+- question: question about the image
+- category / l2-category: task type (e.g., SR-Os)
+- bbox: bounding boxes of relevant objects in ERP images
+- multi-choice options: multiple-choice options
+- answer: correct answer
 
 ## Authors
-
-* **Huyen Tran** - *Tohoku University, Japan* - tranhuyen1191@gmail.com
-* **Van-Quang Nguyen** - *RIKEN, Japan*
-* **Farros Alferro** - *Tohoku University, Japan*
-* **Kang-Jun Liu** - *Tohoku University, Japan*
-* **Takayuki Okatani** - *Tohoku University, Japan* 
-
-* If you have any questions or comments, please feel free to contact me via tranhuyen1191@gmail.com. 
+- Huyen Tran - *Tohoku University, Japan*
+- Van-Quang Nguyen - *RIKEN, Japan*
+- Farros Alferro - *Tohoku University, Japan*
+- Kang-Jun Liu - *Tohoku University, Japan*
+- Takayuki Okatani - *Tohoku University, Japan*
+  
+_If you have any questions or comments, please feel free to contact me via tranhuyen1191@gmail.com._ 
 
 
 ## Acknowledgments
-If you use this source code in your research, please cite the references below:
-
+If you use this dataset in your research, please cite the reference below:
+```
    @misc{tran2026360degimageperceptionmllms,
         title={360{\deg} Image Perception with MLLMs: A Comprehensive Benchmark and a Training-Free Method}, 
         author={Huyen T. T. Tran and Van-Quang Nguyen and Farros Alferro and Kang-Jun Liu and Takayuki Okatani},
@@ -63,10 +62,8 @@ If you use this source code in your research, please cite the references below:
         primaryClass={cs.CV},
         url={https://arxiv.org/abs/2603.16179}, 
     }
-
+```
 ## License
-
-### Images and Videos: All visual media are subject to the original licenses provided by their respective sources (e.g., Flickr/Noirlab and Insta360). Users must adhere to the specific terms set by the original providers.
-
-### Annotations: The questions, categories, and bounding box data provided in 360Bench.tsv are licensed under Creative Commons Attribution 4.0 International (CC BY 4.0).
+* Images and Videos: All visual media are subject to the original licenses provided by their respective sources (e.g., Flickr/Noirlab and Insta360). Users must adhere to the specific terms set by the original providers.
+* Annotations: The questions, categories, and bounding box data provided in 360Bench.tsv are licensed under Creative Commons Attribution 4.0 International (CC BY 4.0).
  
