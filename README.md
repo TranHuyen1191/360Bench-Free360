@@ -20,14 +20,14 @@ root/
 ---
 ## 360Bench Dataset Preparation 
 ### Image/Video Download
-- Images: Download images from Flickr_Noirlab_Links.csv and Insta360_ImageLinks.csv. Store all files in the ori_images/ directory.
-- Videos: Download videos from Insta360_VideoLinks.csv and store them in the insta360_video/ directory.
+- Images: Download images from Flickr_Noirlab_Links.csv and Insta360_ImageLinks.csv. Store all files in the data/ori_images/ directory.
+- Videos: Download videos from Insta360_VideoLinks.csv and store them in the data/insta360_video/ directory.
 
 ### Insta360 Frame Extraction
-- Use the ExtractInsta360Frame.py script to process the downloaded videos. The script references the mapping in Insta360_FrameIndex.csv to extract specific frames, which are then saved directly into the ori_images/ directory.
+- Use ExtractInsta360Frame.py to process the downloaded videos. The script references the mapping in Insta360_FrameIndex.csv to extract specific frames, which are then saved directly into the data/ori_images/ directory.
 
 ### Image Preprocessing
-- Downsample all images within the ori_images/ directory to a 7K resolution (7296 x 3648 pixels) and then store them in the ERP_images/ directory.
+- Use ImagePreprocess.py to downsample all images in the data/ori_images/ directory to a 7K resolution (7296 x 3648 pixels) and then store them in the data/ERP_images/ directory.
 
 ### Benchmark Annotation
 360Bench.tsv is the main annotation file of the benchmark. 
