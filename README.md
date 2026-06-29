@@ -7,7 +7,7 @@ root/
 │   ├── ori_images                        # Directory for raw/extracted images
 │   ├── insta360_video                    # Directory for raw video downloads
 │   ├── ERP_images                        # Directory for preprocessed 7K ERP images
-│   ├── CMP4x3_images                        # Directory for CMP images (converted from images in ERP_images)
+│   ├── CMP4x3_images                     # Directory for CMP images (converted from images in ERP_images)
 │   ├── ExtractInsta360Frame.py           # Extracts frames from Insta360 videos and save to ori_images
 │   ├── ImagePreprocess.py                # Downsample to 7K
 │   ├── 360Bench.tsv                      # Main benchmark annotations
@@ -15,7 +15,7 @@ root/
 │   └── Insta360_VideoLinks.csv           # Metadata for Insta360 images 
 │   └── Insta360_ImageLinks.csv           # Metadata for Insta360 videos
 │   └── Insta360_FrameIndex.csv           # Metadata for Insta360 video frame extraction
-└── 360lib/                               # [360Lib Software for ERP to CMP Conversion](https://vcgit.hhi.fraunhofer.de/jvet/360lib/-/blob/360Lib-13.4/360Lib_README.txt?ref_type=tags)
+└── 360lib/                               # 360Lib Software for ERP to CMP Conversion
 └── src/                                  # Source codes of Free360 Method  
 └── Free360.py                            # Our proposed Free360 framework  
 ```
