@@ -1,4 +1,7 @@
 # 360Bench-Free360
+🎯 **[Project Page](https://tranhuyen1191.github.io/360Bench-Free360/)** 
+📝 **[Paper (arXiv)](https://arxiv.org/abs/2603.16179)**
+
 ## Project Structure
 
 ```text
