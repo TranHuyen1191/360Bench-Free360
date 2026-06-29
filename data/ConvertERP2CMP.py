@@ -112,12 +112,12 @@ def convertErpRgb2Cmp(image_path,CMP_dir,image_idx,converter,CMP_type):
 
 
 dataset_dir = "./" 
-dataset = "360VQA_2_onlyA"
-CMP_type = "4x3" # "3x2" or "4x3"
+dataset = "360Bench" # Dataset name
+CMP_type = "4x3" 
 CMP_dir = f'./CMP{CMP_type}_images'
-converter = "./../UbuntuTohokuDesk/360lib/VVCSoftware_VTM/bin/360ConvertAppStatic"
+converter = "./../360lib/VVCSoftware_VTM/bin/360ConvertAppStatic" #Todo: Revise the path to 360ConvertAppStatic of 360lib 
 os.makedirs(CMP_dir, exist_ok=True)
-image_dir = './images2'
+image_dir = './ERP_images'
 
 
 data_path = os.path.join(dataset_dir, f"{dataset}.tsv")

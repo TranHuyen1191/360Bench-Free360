@@ -50,7 +50,7 @@ def evaluate(data):
     print(f'Among {len(data)} questions, failed to obtain prediction for {len(data) - len(data_un)} questions, '
           f'failed to obtain the score for {cnt_rejected} questions (prediction is not among options). '
           f'Those questions will be counted as 0 score in ALL rating.')
-
+    """
     #Calculate mean std across permutation per question
     scores = data['score'].values.reshape(-1, 4)
     std_per_question = scores.std(axis=1)
@@ -60,7 +60,7 @@ def evaluate(data):
     #Calculate std of accuracy per position
     std_acc_per_pos = data.groupby('answer')['score'].std() 
     mean_std_acc_per_pos = std_acc_per_pos.mean() 
-    print("Mean std of accuracy per position:", mean_std_acc_per_pos)
+    print("Mean std of accuracy per position:", mean_std_acc_per_pos)"""
     return data,num_error,num_rejected
 
 

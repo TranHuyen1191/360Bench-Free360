@@ -7,6 +7,7 @@ root/
 │   ├── ori_images                        # Directory for raw/extracted images
 │   ├── insta360_video                    # Directory for raw video downloads
 │   ├── ERP_images                        # Directory for preprocessed 7K ERP images
+│   ├── CMP4x3_images                        # Directory for CMP images (converted from images in ERP_images)
 │   ├── ExtractInsta360Frame.py           # Extracts frames from Insta360 videos and save to ori_images
 │   ├── ImagePreprocess.py                # Downsample to 7K
 │   ├── 360Bench.tsv                      # Main benchmark annotations
@@ -14,7 +15,9 @@ root/
 │   └── Insta360_VideoLinks.csv           # Metadata for Insta360 images 
 │   └── Insta360_ImageLinks.csv           # Metadata for Insta360 videos
 │   └── Insta360_FrameIndex.csv           # Metadata for Insta360 video frame extraction
-└── Source codes of Free360 Method       # (To be published upon acceptance)
+└── 360lib/                               # [360Lib Software for ERP to CMP Conversion](https://vcgit.hhi.fraunhofer.de/jvet/360lib/-/blob/360Lib-13.4/360Lib_README.txt?ref_type=tags)
+└── src/                                  # Source codes of Free360 Method  
+└── Free360.py                            # Our proposed Free360 framework  
 ```
 
 ---
@@ -28,8 +31,10 @@ root/
 
 ### Image Preprocessing
 - Use ImagePreprocess.py to downsample all images in the data/ori_images/ directory to a 7K resolution (7296 x 3648 pixels) and then store them in the data/ERP_images/ directory.
+- Download and Install 360Lib following instructions (i.e., Step 1: VTM-19.0-360Lib-13.4 software preparation) at [360Lib](https://vcgit.hhi.fraunhofer.de/jvet/360lib/-/blob/360Lib-13.4/360Lib_README.txt?ref_type=tags) 
+- Use ConvertERP2CMP.py to convert ERP images to CMP images using 360Lib. 
 
-### Benchmark Annotation
+### 360Bench Benchmark
 360Bench.tsv is the main annotation file of the benchmark. 
 Each row corresponds to a multiple-choice question associated with a 360° image.
 Each entry includes:
@@ -39,6 +44,13 @@ Each entry includes:
 - bbox: bounding boxes of relevant objects in ERP images
 - multi-choice options: multiple-choice options
 - answer: correct answer
+
+### Free360 framework 
+To execute the Free360 framework, run the main Python script:
+
+```bash
+python Free360.py
+```
 
 ## Authors
 - Huyen Tran - *Tohoku University, Japan*
@@ -53,10 +65,11 @@ _If you have any questions or comments, please feel free to contact me via tranh
 ## Acknowledgments
 If you use this dataset in your research, please cite the reference below:
 ```
-   @misc{tran2026360degimageperceptionmllms,
+   @inproceedings{tran2026360degimageperceptionmllms,
         title={360{\deg} Image Perception with MLLMs: A Comprehensive Benchmark and a Training-Free Method}, 
         author={Huyen T. T. Tran and Van-Quang Nguyen and Farros Alferro and Kang-Jun Liu and Takayuki Okatani},
         year={2026},
+        booktitle = {The European Conference on Computer Vision (ECCV)},
         eprint={2603.16179},
         archivePrefix={arXiv},
         primaryClass={cs.CV},

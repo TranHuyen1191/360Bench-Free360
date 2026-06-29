@@ -1,6 +1,3 @@
-from dotenv import load_dotenv
-load_dotenv()
-
 import os
 import re
 import json
@@ -49,8 +46,8 @@ def str2bool(v):
         raise argparse.ArgumentTypeError('Boolean value expected.')
 
 parser = argparse.ArgumentParser()
-parser.add_argument("--modelname", type=str, default="Free360")
-parser.add_argument("--annotation_file", type=str, default="temp.tsv")
+parser.add_argument("--modelname", type=str, default="Free360_v1")
+parser.add_argument("--annotation_file", type=str, default="360Bench.tsv")
 parser.add_argument("--pro_format", type=str, default="CMP4x3")
 parser.add_argument("--max_obj_per_face", type=int, default=5)
 parser.add_argument("--chunk_idx", type=int, default=0)

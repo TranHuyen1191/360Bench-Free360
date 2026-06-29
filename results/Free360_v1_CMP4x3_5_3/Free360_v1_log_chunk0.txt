@@ -1,0 +1,2 @@
+############ Total time taken for 2800 iterations: 69072.7689 seconds
+############ Average time per iteration: 24.668846 seconds
