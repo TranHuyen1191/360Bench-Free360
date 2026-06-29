@@ -3,3 +3,4 @@ data/ERP_images/*
 data/CMP4x3_images/*
 360lib/VVCSoftware_VTM/bin/*
 *__pycache__*
+!*.gitkeep*
